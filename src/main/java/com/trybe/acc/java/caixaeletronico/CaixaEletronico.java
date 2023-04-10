@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class CaixaEletronico {
 
+  /**
+   * Método principal do projeto.
+   * 
+   * @param args Não utilizado.
+   */
   public static void main(String[] args) {
 
     Banco banco = new Banco();

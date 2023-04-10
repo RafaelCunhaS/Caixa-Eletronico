@@ -8,6 +8,12 @@ public class Transacao {
   private String instante;
   private String descricao;
 
+  /**
+   * Construtor.
+   * 
+   * @param quantia Quantia em R$ transferida na transação.
+   * @param descricao Descrição da transação (Saque, Depósito).
+   */
   public Transacao(double quantia, String descricao) {
     this.quantia = quantia;
     this.descricao = descricao;

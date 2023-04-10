@@ -8,6 +8,13 @@ public class Conta {
   private PessoaCliente pessoaCliente;
   private ArrayList<Transacao> transacoes = new ArrayList<Transacao>();
 
+  /**
+   * Construtor.
+   * 
+   * @param tipoConta Tipo da conta a ser criada (Poupança ou Corrente).
+   * @param pessoaCliente Pessoa que será proprietária da conta.
+   * @param banco Banco onde a conta será criada.
+   */
   public Conta(String tipoConta, PessoaCliente pessoaCliente, Banco banco) {
     this.tipoConta = tipoConta;
     this.pessoaCliente = pessoaCliente;
@@ -37,6 +44,9 @@ public class Conta {
         + this.tipoConta;
   }
 
+  /**
+   * Imprime extratos de todas transações feita.
+   */
   public void retornarExtrato() {
     for (Transacao transacao : transacoes) {
       System.out.println(transacao.retornarResumoTransacao());

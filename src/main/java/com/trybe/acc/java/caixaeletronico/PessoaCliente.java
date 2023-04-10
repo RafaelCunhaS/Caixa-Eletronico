@@ -8,6 +8,13 @@ public class PessoaCliente {
   private String senha;
   private ArrayList<Conta> contas = new ArrayList<Conta>();
 
+  /**
+   * Construtor.
+   * 
+   * @param nome Nome da pessoa.
+   * @param cpf Cpf da pessoa.
+   * @param senha Senha da pessoa.
+   */
   public PessoaCliente(String nome, String cpf, String senha) {
     this.nomeCompleto = nome;
     this.cpf = cpf;
@@ -40,6 +47,13 @@ public class PessoaCliente {
     contas.get(indice).adicionarTransacao(quantia, descricao);
   }
 
+  /**
+   * Validador de senhas.
+   * 
+   * @param senha Senha a ser validada.
+   * @return Retorna um 'true' se a senha for a igual a senha cadastrada da pessoa, do contrário
+   *         retorna um 'false'.
+   */
   public boolean validarSenha(String senha) {
     if (this.senha.equals(senha)) {
       return true;
@@ -48,6 +62,9 @@ public class PessoaCliente {
     }
   }
 
+  /**
+   * Imprime resumo de todas as contas da pessoa.
+   */
   public void retornarResumoContas() {
     for (Conta conta : contas) {
       System.out.println(conta.retornarResumoConta());
